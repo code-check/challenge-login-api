@@ -1,0 +1,8 @@
+﻿build:
+  - npm install
+web:
+  command: node index.js
+  port: 8888
+  dir: app
+  console: true
+test: mocha spec/*

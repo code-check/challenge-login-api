@@ -1,7 +1,9 @@
 ﻿{
     "name": "rest-api-challenge",
     "author": "Givery Inc.",
+    "main": "app/index.js",
     "devDependencies": {
+        "restify": "^3.0.2",
         "api-first-spec": "^0.1.7",
         "chai": "^2.2.0"
     }

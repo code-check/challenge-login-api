@@ -1,11 +1,13 @@
 ﻿{
     "editable": [
         "config.json",
-        "Comments.md"
+        "Comments.md",
+        "app/*"
     ],
     "excludes": [
         ".gitignore",
-        "challenge.json"
+        "challenge.json",
+        "target/*"
     ],
     "test": "mocha spec/*"
 }
