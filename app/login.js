@@ -1,4 +1,4 @@
-﻿// You can use this file for Step1
+﻿// You can use this file for Step2
 //BEGIN_CHALLENGE
 var index = require('./index.js');
 
