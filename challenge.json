@@ -1,6 +1,7 @@
 ﻿{
     "editable": [
         "config.json",
+        "package.json",
         "Comments.md",
         "app/*"
     ],
