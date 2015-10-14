@@ -1,0 +1,8 @@
+﻿{
+    "name": "rest-api-challenge",
+    "author": "Givery Inc.",
+    "devDependencies": {
+        "api-first-spec": "^0.1.7",
+        "chai": "^2.2.0"
+    }
+}
