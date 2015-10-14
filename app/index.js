@@ -1,4 +1,4 @@
-﻿
+﻿// This file will be the main NodeJS entrypoint
 //BEGIN_CHALLENGE
 var
     accounts = [],
