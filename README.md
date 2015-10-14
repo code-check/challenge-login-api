@@ -13,7 +13,11 @@ You are free to use "Comments.md" for any kind of notes, for example
 
 All calls done to the API shall be RESTful, all data shall be json.
 
-### Step 1, Registration
+### Step 1, Starting the server
+
+Make sure the server returns the HTTP status code 200 on the webroot, e.g. "localhost:8888" displays "running".
+
+### Step 2, Registration
 
 Create a registration portal according to the specifications.
 
@@ -21,7 +25,7 @@ Temporaly save all registered accounts, please make sure you clear them every ru
 
 Also add a very simple password policy in which "123abc!" will be valid, but "root" will be invalid.
 
-### Step 2, Login
+### Step 3, Login
 
 Create a registration portal according to the specifications.
 
@@ -29,7 +33,7 @@ Please check for the password and existence of the account.
 
 On a valid login, please provide the user with a login token which can be used for further references.
 
-### Step 3, Remove
+### Step 4, Remove
 
 Sometimes a user might want to remove/disable his/her account, in this case we will keep the user data and apply a so called 'soft delete', meaning that while the user will not be able to login onto the account anymore, the data will persist and nobody will be able to register with the same username.
 
