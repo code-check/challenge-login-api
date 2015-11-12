@@ -6,7 +6,7 @@ var
     config = require("../config.json");
 
 var API = spec.define({
-    "endpoint": config.endpoints.register,
+    "endpoint": "/api/accounts/register",
     "method": "POST",
     "request": {
         "contentType": spec.ContentType.JSON,
@@ -103,3 +103,4 @@ describe("Register", function () {
 });
 
 module.exports = API;
+
