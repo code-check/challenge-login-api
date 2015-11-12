@@ -7,7 +7,7 @@ var
     registerAPI = require("./register.spec.js");
 
 var API = spec.define({
-    "endpoint": config.endpoints.login,
+    "endpoint": "/api/accounts/login",
     "method": "POST",
     "request": {
         "contentType": spec.ContentType.JSON,
@@ -94,3 +94,4 @@ describe("Login", function () {
 });
 
 module.exports = API;
+

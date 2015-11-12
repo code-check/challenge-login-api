@@ -1,8 +1,3 @@
 ﻿{
-    "host": "localhost:8888",
-    "endpoints": {
-        "register": "/Account/Register",
-        "login": "/Account/Login",
-        "remove": "/Account/Remove"
-    }
+    "host": "localhost:8888"
 }
