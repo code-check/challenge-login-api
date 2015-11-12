@@ -9,8 +9,9 @@ var
 
 var API = spec.define({
     "endpoint": "/api/accounts/disable",
-    "method": "DELETE",
+    "method": "POST",
     "request": {
+        "contentType": spec.ContentType.JSON,
         "params": {
             "token": "string"
         },
