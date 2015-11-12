@@ -8,9 +8,8 @@ var
     registerAPI = require("./register.spec.js");
 
 var API = spec.define({
-    "endpoint": config.endpoints.remove,
+    "endpoint": "/api/accounts/disable",
     "method": "POST",
-
     "request": {
         "contentType": spec.ContentType.JSON,
         "params": {
@@ -31,7 +30,7 @@ var API = spec.define({
 describe("Remove", function () {
     var
         host = spec.host(config.host),
-        token = "";   
+        token = "";
 
     before(function (done) {
         host.api(registerAPI).params({
@@ -90,3 +89,4 @@ describe("Remove", function () {
 });
 
 module.exports = API;
+
