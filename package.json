@@ -1,6 +1,11 @@
 ﻿{
     "name": "rest-api-challenge",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/code-check/challenge-login-api.git"
+    },
     "author": "Givery Inc.",
+    "license": "MIT",
     "devDependencies": {
         "api-first-spec": "^0.1.7",
         "chai": "^2.2.0"
