@@ -1,40 +1,51 @@
-﻿### Information
+## 好きなフレームワークでLogin機能を実装しよう
 
-The goal of this challenge is to create a basic login API, the specifications for this API is created by using 'api-first-spec' so these are already avalaible to you.
+### まずはじめに
 
-As most of the specification is already defined in the spec files (see the spec folder), some steps might seem to be lacking information to run correctly, in these cases please read the spec file belonging to the step.
+この問題のゴールは、あなたが好きな言語やフレームワークを用いて、基本的なログイン機能を実装することです。  
+ログイン機能の詳細のスペックは既に'api-first-spec'を用いて定義されています。（specフォルダ内をご確認ください）  
+正しく問題を回答するため、それぞれの問題のSpecを読みながら回答してみてください。
 
-Any custom configuration can be done in the config.json file.
+その他の設定は、[cofig.json](config.json)ファイルに記載がされています。
 
-You are free to use "Comments.md" for any kind of notes, for example
-- Personal notes or problems
-- Information on how your code works
-- Any suggestions on what should be changed in the specifications.
+- 悩んだことやメモ
+- 回答した内容がどのように動くか、どのような実装をしたか
+- 工夫したところやSpecの改善提案  
+等、表現したいことがございましたら、[Comments.md](Comments.md)にお書きください。
 
-All calls done to the API shall be RESTful, all data shall be json.
+全てのAPIコールはRESTfulであり、全てのデータはjson式です。
 
-### Step 1, Starting the server
+### Step 1　サーバを立ち上げよう
 
-Make sure the server returns the HTTP status code 200 on the webroot, e.g. "localhost:8888" displays "running".
+サーバがwebrootでHTTPステータスコード200を返すか確認してください。  
+(例)  
+- "localhost:8888"
+- 表示 "running".
 
-### Step 2, Registration
+### Step 2, 登録機能を実装しよう
 
-Create a registration portal according to the specifications.
+仕様(specファイル)に従って、登録機能を作成してみましょう。  
 
-Temporaly save all registered accounts, please make sure you clear them every run.
+- 登録されたアカウントは一時的に保存されます。もう一度実行をすると登録されたアカウントが削除されていることを確認してください。
+- パスワードの規制はシンプルで、"123abc!"は有効ですが、"root"は有効ではありません。
 
-Also add a very simple password policy in which "123abc!" will be valid, but "root" will be invalid.
+### Step 3, ログイン機能を実装しよう
 
-### Step 3, Login
+仕様(specファイル)に従って、登録機能を作成してみましょう。  
 
-Create a registration portal according to the specifications.
-
-Please check for the password and existence of the account.
-
+- アカウントの存在と、パスワードと確認する機能を実装してください。
+- ログインが有効になった際に、
 On a valid login, please provide the user with a login token which can be used for further references.
 
-### Step 4, Remove
+### Step 4, 削除機能を実装しよう
 
-Sometimes a user might want to remove/disable his/her account, in this case we will keep the user data and apply a so called 'soft delete', meaning that while the user will not be able to login onto the account anymore, the data will persist and nobody will be able to register with the same username.
+仕様(specファイル)に従って、削除機能（ソフトデリート）を作成してみましょう。  
 
-As we want to prevent any abuse of this system, any invalid access to this should throw a HTTP status code of 401 "Unauthorized"
+何人かのユーザは自身のアカウントを削除・停止したい場合があります。  
+その場合、  
+- ユーザはそのアカウントを利用してログインできなくなる
+- 登録データはデータベースに保存されたまま
+- 他のユーザは同一のアカウント名を使って登録することは出来ない
+- システムの悪用を防ぐため、向こうなアクセスに対して"401 Unauthorized"のHTTPステータスコードを返す
+
+といった機能を持つ”ソフトデリート”を活用します。
